@@ -53,21 +53,21 @@
         <div class="row justify-content-center">
             <div class="col-12">
                 <h1 class="display-1 text-center">
-                  Chi siamo
+                  Docenti
                 </h1>
             </div>
         </div>
     </div>
     <div class="container my-5">
       <div class="row justify-content-center">
-        @foreach($students as $student)
+        @foreach($docenti as $docente)
           <div class="col-12 col-md-4">
             <div class="card" style="width: 18rem;">
               <img src="https://picsum.photos/200/300" class="card-img-top" alt="...">
               <div class="card-body">
-                <h5 class="card-title">{{ $student['name'] }} {{ $student['surname'] }}</h5>
-                <p class="card-text">Età: {{ $student['age'] }}</p>
-                <a href="{{route('dettaglio-studente', ['id' => $student['id'] ])}}" class="btn btn-primary">Go somewhere</a>
+                <h5 class="card-title">{{ $docente['name'] }} {{ $docente['surname'] }}</h5>
+                <p class="card-text">Età: {{ $docente['age'] }}</p>
+                <a href="{{route('dettaglio-docente', ['id' => $docente['id']])}}" class="btn btn-primary">Go somewhere</a>
               </div>
             </div>
           </div>

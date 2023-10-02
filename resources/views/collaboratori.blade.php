@@ -53,24 +53,15 @@
       <div class="row justify-content-center">
         <div class="col-12">
           <h1 class="display-1 text-center">
-            Docenti
+            Collaboratori
           </h1>
         </div>
       </div>
     </div>
     <div class="container my-5">
       <div class="row">
-        @foreach($docenti as $docente)
-          <div class="col-12 col-md-4 my-3 d-flex justify-content-center">
-            <div class="card shadow" style="width: 18rem;">
-              <img src="https://picsum.photos/200" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">{{ $docente['name'] }} {{ $docente['surname'] }}</h5>
-                <p class="card-text"><strong>Età:</strong> {{ $docente['age'] }}</p>
-                <a href="{{route('dettaglio-docente', ['id' => $docente['id']])}}" class="btn btn-primary">Vai al dettaglio</a>
-              </div>
-            </div>
-          </div>
+        @foreach ($collaborators as $collaborator)
+          <a href="{{route('dettaglio-collaboratore', ['id' => $collaborator['id']])}}">{{$collaborator['name']}}</a>
         @endforeach
       </div>
     </div>

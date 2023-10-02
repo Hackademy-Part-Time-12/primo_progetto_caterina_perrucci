@@ -26,6 +26,9 @@
               <a class="nav-link" href="{{ route('teachers') }}">Docenti</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="{{ route('collaborators') }}">Collaboratori</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{route('location')}}">Dove siamo</a>
             </li>
             <li class="nav-item dropdown">

@@ -26,6 +26,9 @@
               <a class="nav-link" href="{{route('teachers')}}">Docenti</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" href="{{ route('collaborators') }}">Collaboratori</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" href="{{route('location')}}">Dove siamo</a>
             </li>
             <li class="nav-item dropdown">
@@ -65,7 +68,7 @@
             <div class="card-body">
               <h5 class="card-title">{{ $student['name'] }} {{ $student['surname'] }}</h5>
               <p class="card-text"><strong>Età:</strong> {{ $student['age'] }}</p>
-              <p class="card-text"><strong>Materia:</strong> {{$student['subject']}}</p>
+              <p class="card-text"><strong>Materia:</strong> <a href="{{ route('materia-studente', ['subject' => $student['subject']]) }}">{{$student['subject']}}</a></p>
               <a href="{{route('students')}}" class="btn btn-primary">Torna indietro</a>
             </div>
           </div>

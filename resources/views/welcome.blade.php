@@ -1,7 +1,10 @@
 <x-layout>
+  <!-- Tag per il titolo delle pagine. Nell'attributo name vado ad inserire il nome della variabile che ho messo per il title e poi nel tag inserisco come contenuto il titolo che voglio visualizzare in quella pagina-->
   <x-slot name="title">
     Hackademy
   </x-slot>
+
+  <!-- Richiamo il componente header a cui devo passare il valore della variabile slot all'interno del componente -->
   <x-header>
     Benvenuti
   </x-header>    

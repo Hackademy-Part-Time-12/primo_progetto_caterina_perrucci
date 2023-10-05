@@ -9,6 +9,7 @@
     <div class="row">
       @foreach($students as $student)
         <div class="col-12 col-md-4 my-3 d-flex justify-content-center">
+          <!-- Richiamo il componente card con tag autoconclusivo. Inserisco degli attributi che come valore avranno la chiave della variabile che si sta ciclando -->
           <x-card 
           id="{{$student['id']}}"
           name="{{$student['name']}}"

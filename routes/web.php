@@ -21,6 +21,8 @@ use App\Http\Controllers\TeacherController;
 // Rotte Public
 Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 Route::get('/dove-siamo', [PublicController::class, 'location'])->name('location');
+Route::get('/contatti', [PublicController::class, 'contact'])->name('contatti');
+Route::post('/contatti/invia', [PublicController::class, 'contactSubmit'])->name('invia.contatto');
 // Rotte Student
 Route::get('/studenti', [StudentController::class, 'index'])->name('students');
 Route::get('/studenti/dettaglio/{id}', [StudentController::class, 'show'])->name('dettaglio-studente');
